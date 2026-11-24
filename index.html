@@ -36,7 +36,7 @@
 @media(prefers-reduced-motion:reduce){.history-track{animation:none}.history-run[aria-hidden=true]{display:none}}
 @media(max-width:600px){.history-marquee{padding:19px 0}.history-kicker{padding-left:16px}.history-item{padding:0 20px;gap:10px}.history-year{font-size:1.3rem}.history-copy{font-size:.8rem}}
 </style><style>
-.mid-reel{padding:58px 0 66px;background:#171914;border-bottom:1px solid rgba(255,255,255,.12)}
+.mid-reel{padding:58px 0 66px;background:transparent;border-bottom:1px solid rgba(255,255,255,.12)}
 .mid-reel-inner{display:grid;grid-template-columns:1fr 300px;gap:54px;align-items:center}
 .mid-reel-copy h2{font-size:clamp(2rem,4vw,3.4rem);max-width:650px;margin:14px 0}
 .mid-reel-copy p{color:#c4c2b8;max-width:570px}
@@ -44,9 +44,9 @@
 @media(max-width:760px){.mid-reel-inner{grid-template-columns:1fr;gap:24px}.mid-reel-frame{justify-self:center;width:min(100%,300px)}}
 </style><style>
 .mid-reel{position:relative;isolation:isolate;overflow:hidden}
-.facebook-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.5}
-.facebook-bg-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,13,10,.9),rgba(10,13,10,.72));z-index:-1}
-.mid-reel-inner{position:relative;z-index:1}
+.facebook-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1;display:block}
+.facebook-bg-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,13,10,.62),rgba(10,13,10,.42));z-index:1;pointer-events:none}
+.mid-reel-inner{position:relative;z-index:2}
 </style></head>
 <body>
 <header class="top"><div class="wrap nav"><a class="logo" href="/sol-fruta/" aria-label="Sol & Fruta, inicio"><img src="/sol-fruta/sol-fruta-logo-extraido.png" alt="Sol &amp; Fruta"></a><button class="menu" id="menu" aria-expanded="false" aria-controls="links">MENÚ</button><nav class="links" id="links" aria-label="Navegación principal"><a href="/sol-fruta/" aria-current="page">Inicio</a><a href="/sol-fruta/empresa/" >Empresa</a><a href="/sol-fruta/productos/" >Productos</a><a href="/sol-fruta/unidades-comerciales/" >Unidades comerciales</a><a href="/sol-fruta/contacto/" >Contacto</a></nav></div></header>
