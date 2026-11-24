@@ -49,16 +49,25 @@
 .mid-reel-inner{position:relative;z-index:2}
 
 <style>
-.market-marquee{position:relative;overflow:hidden;background:#f3f0e7;color:#18231a;border-bottom:1px solid rgba(24,35,26,.12);padding:24px 0 22px}
-.market-kicker{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#405b36;font-weight:850;padding:0 5vw 14px}
+.market-marquee{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(118deg,#f47a16 0%,#ff9a25 38%,#f36b0c 72%,#ffad38 100%);color:#153c20;border-bottom:1px solid rgba(92,47,8,.2);padding:24px 0 22px}
+.market-marquee:before{content:"";position:absolute;inset:-35%;z-index:-1;pointer-events:none;opacity:.78;background:
+radial-gradient(ellipse 11px 18px at 8% 25%,rgba(255,255,255,.62) 0 25%,rgba(255,255,255,.18) 48%,transparent 72%),
+radial-gradient(ellipse 20px 28px at 22% 78%,rgba(255,255,255,.42) 0 20%,rgba(255,255,255,.12) 48%,transparent 72%),
+radial-gradient(ellipse 13px 20px at 43% 18%,rgba(255,255,255,.58) 0 22%,rgba(255,255,255,.12) 52%,transparent 74%),
+radial-gradient(ellipse 24px 31px at 61% 68%,rgba(255,255,255,.38) 0 20%,rgba(255,255,255,.12) 48%,transparent 72%),
+radial-gradient(ellipse 12px 18px at 79% 32%,rgba(255,255,255,.6) 0 24%,rgba(255,255,255,.14) 50%,transparent 72%),
+radial-gradient(ellipse 19px 25px at 91% 82%,rgba(255,255,255,.4) 0 22%,rgba(255,255,255,.12) 50%,transparent 74%),
+radial-gradient(ellipse at 50% 50%,rgba(255,192,95,.22),transparent 65%)}
+.market-marquee:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-radial-gradient(circle at 15% 20%,rgba(255,255,255,.12) 0 1px,transparent 2px 13px);opacity:.25}
+.market-kicker{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#173f20;font-weight:900;padding:0 5vw 14px;text-shadow:0 1px 0 rgba(255,255,255,.24)}
 .market-track{display:flex;width:max-content;animation:market-drift 38s linear infinite}
 .market-marquee:hover .market-track{animation-play-state:paused}
 .market-run{display:flex;align-items:center;flex-shrink:0}
 .market-item{display:flex;align-items:center;gap:12px;padding:0 34px;white-space:nowrap}
-.market-name{font-size:1.2rem;font-weight:900;letter-spacing:-.035em;color:#5c813e}
-.market-copy{font-size:.88rem;font-weight:650;color:#273329}
-.market-dot{width:7px;height:7px;border-radius:50%;background:#e5a83d;box-shadow:0 0 0 5px rgba(229,168,61,.16);flex-shrink:0}
-.market-separator{height:1px;width:48px;background:rgba(39,51,41,.2)}
+.market-name{font-size:1.2rem;font-weight:950;letter-spacing:-.035em;color:#123d1e;text-shadow:0 1px 0 rgba(255,255,255,.28)}
+.market-copy{font-size:.88rem;font-weight:750;color:#183d22;text-shadow:0 1px 0 rgba(255,255,255,.2)}
+.market-dot{width:8px;height:8px;border-radius:50%;background:#174c26;box-shadow:0 0 0 5px rgba(255,255,255,.28),0 1px 5px rgba(65,35,5,.25);flex-shrink:0}
+.market-separator{height:1px;width:48px;background:rgba(25,65,31,.42)}
 @keyframes market-drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.market-track{animation:none}.market-run[aria-hidden=true]{display:none}}
 @media(max-width:600px){.market-marquee{padding:20px 0}.market-kicker{padding-left:16px}.market-item{padding:0 20px;gap:9px}.market-name{font-size:1.05rem}.market-copy{font-size:.8rem}}
